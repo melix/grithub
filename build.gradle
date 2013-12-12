@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.1'
+    compile 'org.kohsuke:github-api:1.47'
+}
+
+mainClassName='step0.step0'
+
