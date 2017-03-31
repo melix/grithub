@@ -42,8 +42,8 @@ class Wrapper {
 
 class GroovyGitHub extends Wrapper {
 
-    public static void session(Closure c) {
-        def gh = new GroovyGitHub(delegate: GitHub.connect())
+    public static void session(String username = null, String token = null, Closure c) {
+        def gh = new GroovyGitHub(delegate: GitHub.connect(username, token))
         def beforeLimit = gh.rateLimit
         gh.with(c)
         def afterLimit = gh.rateLimit
